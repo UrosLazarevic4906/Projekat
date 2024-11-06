@@ -1,15 +1,10 @@
-package com.example.cs330_schoolink_uroslazarevic4906.data.db.professor
+package com.example.cs330_schoolink_uroslazarevic4906.domen.entities
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.example.cs330_schoolink_uroslazarevic4906.domen.logic.util.SexEnum
 import java.time.LocalDateTime
 
-
-@Entity(
-    tableName = "Professor"
-)
-data class ProfessorEntity(
+class Professor (
+    val id : Int,
     val email : String,
     val password : String,
     val firstName : String,
@@ -17,7 +12,5 @@ data class ProfessorEntity(
     val dateOfBirth : LocalDateTime,
     val sex : SexEnum,
     val image: ByteArray,
-    val code : String,
-    @PrimaryKey(autoGenerate = true)
-    val id : Int = 0
+    val code : String
 )

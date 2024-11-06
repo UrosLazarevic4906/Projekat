@@ -64,7 +64,7 @@ dependencies {
         implementation(libs.room.runtime)
         implementation(libs.room.ktx)
         implementation(libs.accompanist.systemuicontroller)
-        implementation("androidx.navigation:navigation-compose:2.8.2")
+        implementation(libs.androidx.navigation.compose)
 
         ksp(libs.room.compiler)
 
@@ -76,5 +76,6 @@ dependencies {
         debugImplementation(libs.androidx.compose.ui.tooling)
         debugImplementation(libs.androidx.compose.ui.test.manifest)
     }
+    implementation(kotlin("script-runtime"))
 
 }

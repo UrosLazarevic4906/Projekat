@@ -10,6 +10,7 @@ import java.time.LocalDateTime
 interface SessionDao {
     @Insert
     suspend fun insertSession(sessionEntity : SessionEntity) : Long
+
     @Query("SELECT * FROM Session WHERE date = :date AND groupId = :groupId")
     suspend fun getSessions(date : LocalDateTime, groupId : Int) : Flow<List<SessionEntity>>
 }

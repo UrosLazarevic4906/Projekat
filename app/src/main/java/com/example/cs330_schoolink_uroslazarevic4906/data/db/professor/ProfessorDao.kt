@@ -1,8 +1,10 @@
 package com.example.cs330_schoolink_uroslazarevic4906.data.db.professor
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
+@Dao
 interface ProfessorDao {
     @Insert
     suspend fun insertProfessor(professorEntity: ProfessorEntity) : Long
